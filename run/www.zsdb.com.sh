@@ -2,7 +2,7 @@
 NAME=www.zsdb.com
 case $1 in 
 "start")
-	docker run -d -p 8001:80 -v /data0/web/$NAME:/data0/web/default -v /data0/logs/docker/$NAME:/data0/logs/ --name $NAME registry.miguan.com/php
+	docker run -d -p 8001:80 -v /data0/web/$NAME:/data0/web/default -v /data0/logs/docker/$NAME:/data0/logs/ --name $NAME registry.miguan.com/$NAME
 	;;
 "stop")
 	docker stop $NAME
